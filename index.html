@@ -3,39 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Site</title>
+    <title>Minimalist Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>ElectroShop</h1>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
 
-    <div class="card">
-        <h1 id="title">Hello, World!</h1>
-        <p>This is a simple website built with HTML, CSS, and JS.</p>
-        <button id="colorBtn">Change Color</button>
+    <main id="product-list">
+        </main>
+
+    <div id="cart-modal" class="hidden">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button onclick="toggleCart()">Close</button>
+            <button id="checkout-btn">Checkout</button>
+        </div>
     </div>
-    <div class="form-container">
-    <form id="contactForm">
-        <h2>Get in Touch</h2>
-        
-        <div class="input-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="John Doe" required>
-        </div>
-
-        <div class="input-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="john@example.com" required>
-        </div>
-
-        <div class="input-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="How can I help?" required></textarea>
-        </div>
-
-        <button type="submit" id="submitBtn">Send Message</button>
-        <p id="responseMsg"></p>
-    </form>
-</div>
 
     <script src="script.js"></script>
 </body>
